@@ -1,0 +1,336 @@
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="text-info"><b>Brainstorming Entreprise x</b></h1>
+            <p>(Modifier les details de votre réunion, Inviter des personnes)</p>
+        </div>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 ">
+              <button  class="btn btn-info float-right"  data-toggle="modal" data-target="#suppr_Reunion">Annuler Réunion</button>&nbsp;&nbsp;
+              <button  class="btn btn-warning float-right"  data-toggle="modal" data-target="#invitation">Inviter</button>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-lg-6 col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-tabs card-header-primary">
+                      <div class="nav-tabs-navigation">
+                          <div class="nav-tabs-wrapper">
+                              <span class="nav-tabs-title">Reunion:</span>
+                              <ul class="nav nav-tabs" data-tabs="tabs">
+                                  <li class="nav-item">
+                                      <a mat-button class="nav-link" href="#settings" data-toggle="tab">
+                                          <i class="material-icons">cloud</i> Planification
+                                          <div class="ripple-container"></div>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <div class="tab-content">
+                          <div class="tab-pane active" id="profile">
+                              <table class="table">
+                                  <tbody>
+                                  <tr>
+                                      <td  class="text-primary">Nom : </td>
+                                      <td>Brainstorming Entreprise x</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td class="text-primary">Description:</td>
+                                      <td>...</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td class="text-primary">Salle: </td>
+                                      <td> Salle 1</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+
+                                      <td class="text-primary">Date:</td>
+                                      <td>23/04/2019</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+
+                                      <td class="text-primary">Date Création:</td>
+                                      <td>04/04/2019</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="tab-pane" id="messages">
+                              <table class="table">
+                                  <tbody>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                                  <span class="form-check-sign">
+                                                          <span class="check"></span>
+                                                      </span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                      </td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                          <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">close</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="">
+                                                  <span class="form-check-sign">
+                                                          <span class="check"></span>
+                                                      </span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                          <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">close</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="tab-pane" id="settings">
+                              <table class="table">
+                                  <tbody>
+                                  <tr>
+                                      <td class="text-primary"><b>Ordre du Jour</b> </td>
+                                      <td> <small>Restez organiser et planifiez vos réunions</small> </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="">
+                                                  <span class="form-check-sign">
+                                                          <span class="check"></span>
+                                                      </span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Mission 1 :Discuter le cahier de charge</td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                          <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">close</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                                  <span class="form-check-sign">
+                                                          <span class="check"></span>
+                                                      </span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Mission 2: Proposer des outils de gestion de projets
+                                      </td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                          <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">close</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                                  <span class="form-check-sign">
+                                                          <span class="check"></span>
+                                                      </span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Mission 3: Répartition des tâches
+                                      </td>
+                                      <td class="td-actions text-right">
+                                          <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                          <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                              <i class="material-icons">close</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+          <div class="card card-chart">
+              <div class="card-header card-header-success">
+                  <div class="ct-chart" id="dailySalesChart"></div>
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title text-success"><b>Reponses aux invitations</b></h4>
+                  <p class="card-category">
+                      <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> des invités ont confirmé leur présences</p>
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-warning">Personnes confirmés</button>&nbsp;&nbsp;
+                      <button type="button" class="btn btn-warning">Personnes pas encores confirmés</button>
+                  </div>
+              </div>
+              <div class="card-footer">
+                  <div class="stats">
+                      <i class="material-icons">access_time</i> updated 4 minutes ago
+                  </div>
+              </div>
+          </div>
+          </div>
+  </div>
+</div>
+</div>
+
+
+<div class="modal fade" id="suppr_Reunion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >Annuler Reunion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- formulaire -->
+                Etes-vous sure de vouloir Annuler Cette réunion ? <br/>
+                <!-- formulaire -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" [routerLink]="[iconsPath]" (click)="onSupprProjet()">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="invitation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="exampleModalCenterTitle">Inviter à partir de l'annuaire</h5>-->
+                <!--<button style="text-align: right;" mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">-->
+                    <!--<i class="material-icons">search</i><div class="ripple-container"></div>-->
+                <!--</button>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <div class="row">
+                        <p class="col-md-7 card-title"><b>Inviter à partir de l'annuaire</b></p>
+                        <div class="col-md-5" style="text-align: right;">
+                            <form class="form-inline md-form form-sm active-pink active-pink-2 mt-2">
+                                <img src="assets/search.png" style="width: 10px;height: 10px;">
+                                <input class="form-control form-control-sm ml-3 w-75" type="text"  aria-label="Chercher un site">
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover">
+                            <thead class="text-warning">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th></th>
+                            <th>Inviter</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Dakota Rice</td>
+                                <td></td>
+                                <td><button class="btn btn-outline-primary">Inviter</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Minerva Hooper</td>
+                                <td></td>
+                                <td><button class="btn btn-outline-primary">Inviter</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Sage Rodriguez</td>
+                                <td></td>
+                                <td><button class="btn btn-outline-primary">Inviter</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Philip Chaney</td>
+                                <td></td>
+                                <td><button class="btn btn-outline-primary">Inviter</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

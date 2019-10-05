@@ -1,0 +1,84 @@
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="text-info"><b>Invitation aux réunions</b></h1>
+            <p>(Consulter les réunions ou vous etez invité.Confirmer ou infirmer votre présence.<br>Supprimer les invitations indéserables)</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="card-deck">
+        <div *ngFor="let r of reunions2" class="card" style="cursor: pointer;" (click)="onClickReunion(r)" [routerLink]="[typography]">
+            <img src="{{r.photoPath}}" class="card-img-top" alt="...">
+            <div class="card-body" >
+                <br>
+                <h5 class="card-title text-info"><b>{{r.name}}</b></h5>
+                <p class="card-text">
+                    <b class="text-gray">Salle :</b> {{r.salle}} <br>
+                    <b class="text-gray">Date : </b> {{r.date}}<br>
+                </p>
+                <hr>
+                <p class="card-text text-primary" style="text-align: right;">
+                    Confirmer Votre Présence<br>
+
+                    <img src="assets/c.png" (click)="showNotification('top','right')" style="width: 30px;height: 30px; cursor: pointer;" [routerLink]="[typologyPath]"> &nbsp;
+                    <img src="assets/warning.png" style="width: 30px;height: 30px;" > &nbsp;
+                    <img src="assets/d.png" (click)="showNotification2('top','right')" style="width: 30px;height: 30px; cursor: pointer;" [routerLink]="[typologyPath]">
+
+                </p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Created 2 days ago</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="col-md-4">-->
+<!--<button mat-raised-button class="btn btn-danger btn-block" ">Top Right</button>-->
+<!--</div>-->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Créer une Nouvelle Réunion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="form-group">
+                        <label class="text-info">Nom</label>
+                        <input type="text" class="form-control" name="name" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-info">Date</label>
+                        <input type="date" class="form-control" name="name" formControlName="date">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-info">Salle</label>
+                        <select class="form-control" formControlName="salle">
+                            <option>Salle 1</option>
+                            <option>Salle 2</option>
+                            <option>Salle 3</option>
+                            <option>Salle 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label  class="text-info">Description</label><br>
+                        <textarea class="form-control" formControlName="description"></textarea>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning"(click)="onClickAdd()"  data-dismiss="modal">Créer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-5">
+            <h1 class="text-warning"><b>Vos Réunions</b></h1>
+            <p>(Créer de réunions et Gérrer les facilement)</p>
+        </div>
+        <div class="col-md-4" style="text-align: right;">
+            <form class="form-inline md-form form-sm active-pink active-pink-2 mt-2">
+                <img src="assets/search.png" style="width: 20px;height: 20px;">
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Chercher une reunion" aria-label="Chercher un site">
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <button  class="btn btn-warning float-right"  data-toggle="modal" data-target="#exampleModalCenter">Créer une réunion</button>
+        </div>
+    </div>
+    <div class="card-deck">
+    <div *ngFor="let r of reunions" class="card" style="cursor: pointer;" (click)="onClickReunion(r)" [routerLink]="[typography]">
+        <img src="{{r.photoPath}}" class="card-img-top" alt="...">
+        <div class="card-body" >
+            <br>
+            <h5 class="card-title text-info"><b>{{r.name}}</b></h5>
+            <p class="card-text">
+                <b class="text-gray">Salle :</b> {{r.salle}} <br>
+                <b class="text-gray">Date : </b> {{r.date}}<br>
+            </p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Created 2 days ago</small>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Créer une Nouvelle Réunion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="form-group">
+                        <label class="text-info">Nom</label>
+                        <input type="text" class="form-control" name="name" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-info">Date</label>
+                        <input type="date" class="form-control" name="name" formControlName="date">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-info">Salle</label>
+                        <select class="form-control" formControlName="salle">
+                            <option>Salle 1</option>
+                            <option>Salle 2</option>
+                            <option>Salle 3</option>
+                            <option>Salle 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label  class="text-info">Description</label><br>
+                        <textarea class="form-control" formControlName="description"></textarea>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning"(click)="onClickAdd()"  data-dismiss="modal">Créer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

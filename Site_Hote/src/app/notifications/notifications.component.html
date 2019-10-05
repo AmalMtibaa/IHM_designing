@@ -1,0 +1,87 @@
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="text-success"><b>Liste des Salles</b></h1>
+            <p>(Supérviser les salles et leurs occupations.)</p>
+        </div>
+        <div class="col-md-4" style="text-align: right;">
+            <form class="form-inline md-form form-sm active-pink active-pink-2 mt-2">
+                <img src="assets/search.png" style="width: 20px;height: 20px;">
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Chercher une salle" aria-label="Chercher une salle">
+            </form>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card">
+                <div class="card-header card-header-success">
+                    <h4 class="card-title ">Liste des Salles</h4>
+                    <!--<p class="card-category"> Here is a subtitle for this table</p>-->
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-success">
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Nom
+                            </th>
+                            <th>
+                                Capacité
+                            </th>
+                            <th>
+                                Equiepement
+                            </th>
+                            <th>
+                                Site Associé
+                            </th>
+                            <th>
+                                Occupation
+                            </th>
+                            </thead>
+                            <tbody *ngFor="let item of salles">
+                            <tr>
+                                <td>{{item["id"]}}</td>
+                                <td>{{item["name"]}}</td>
+                                <td>{{item["capacite"]}}</td>
+                                <td>{{item["equipement"]}}</td>
+                                <td>{{item["site"]}}</td>
+                                <td><img
+                                        data-toggle="modal" data-target="#calendar"
+                                        style="cursor:pointer;" class="mb-4" src="assets/calendar1.png"
+                                        alt="update" width="40" height="40"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="calendar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="width: 180%">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Occupation <b>Salle1</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="https://i0.wp.com/angularscript.com/wp-content/uploads/2015/03/Pure-AngularJS-Responsive-Calendar-Directive.jpg">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
